@@ -18,9 +18,8 @@ const partialsPath = path.join(__dirname, '../templates/partials')
 // Setup handlebars engine and views location
 app.set('view engine', 'hbs')
 app.set('views', viewsPath)
+app.use(express.static(publicDirPath))
 hbs.registerPartials(partialsPath)
-
-   app.use(express.static(publicDirPath))
 
 const name = 'Gavin Meeker'
 
