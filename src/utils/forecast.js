@@ -9,7 +9,7 @@ const forecast = (longitude, latitude, callback) => {
 		} else if (body.error) {
 			callback('Unable to find location')
 		} else {
-			const forecastString = `It is currently ${body.current.temperature} degrees out. But it feels like ${body.current.feelslike}`
+			const forecastString = `It is currently ${body.current.temperature} degrees out. But it feels like ${body.current.feelslike}. The local time is ${body.current.observation_time}.`
 			callback(undefined, forecastString)
 		}
 	})
